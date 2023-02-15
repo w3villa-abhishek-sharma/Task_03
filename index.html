@@ -28,76 +28,89 @@
     <title>Bootstrap Learning</title>
   </head>
   <body>
-
     <!-- Header -->
     <section class="bg-color">
       <header class="container py-3">
-        <div class="row align-items-center">
-          <div class="col-2 font-size-1-2 main-color fw-bold">Besnik</div>
-          <div class="col-5 offset-1">
-            <div class="row">
-              <div class="col text-center main-color">Home</div>
-              <div class="col text-center main-color">Features</div>
-              <div class="col text-center main-color">Pricing</div>
-              <div class="col text-center main-color">About</div>
-              <div class="col text-center main-color">Contact</div>
-            </div>
+        <div class="d-flex justify-content-between">
+          <div class="display-4 main-color fw-bold">Besnik</div>
+          <ul id="mobileMenu" class="sm-py-2 px-0 d-lg-flex align-items-center phone-navbar">
+            <li class="list-group-item main-color mx-5">Home</li>
+            <li class="list-group-item main-color mx-4">Features</li>
+            <li class="list-group-item main-color mx-4">Pricing</li>
+            <li class="list-group-item main-color mx-4">About</li>
+            <li class="list-group-item main-color mx-4">Contact</li>
+
+            <li class="ist-group-item d-none d-sm-block main-color">Login</li>
+            <li class="ist-group-item d-none d-sm-block lg-ms-5 col btn btn-primary px-3 background-color">Sign Up</li>
+          </ul>
+          </ul>
+
+          <div class="phone-navbar d-flex align-items-center">
+            <div class="main-color login">Login</div>
+            <button class="login ms-5 col btn btn-primary px-3 background-color">
+              Sign Up
+            </button>
           </div>
-          <div class="col-3 offset-1">
-            <div class="row align-items-center">
-              <div class="col offset-1 text-center main-color">Login</div>
-              <button class="col btn btn-primary px-3 background-color">
-                Sign Up
-              </button>
-            </div>
-          </div>
+
+          <i onclick="handleMenu()" class="d-flex align-items-center main-color d-lg-none fa-solid fa-bars"></i>
         </div>
       </header>
 
       <!-- Main Screen 1 -->
-      <section class="container vh-100">
-        <div class="row h-100">
-          <div class="col-7 my-auto">
-            <div class="my-5 fs-3">Book your course</div>
-            <h1 class="display-2 fw-bold">
-              A great place <br />
-              for learning.
-            </h1>
-            <p class="fs-4 text-secondary">
-              A best and cheapest way of <br />getting knw learning to make a
-              <br />
-              better tomorrow
-            </p>
-            <div>
-              <button class="my-5 background-color btn btn-primary px-5 py-3">
-                Get started
-              </button>
-            </div>
-          </div>
-          <div class="col-3 my-auto h-100 position-relative">
-            <img
-              class="h-100 object-fit-cover"
-              src="./Assets/images/girl.png"
-            />
-            <div class="circle-1"></div>
-            <div class="circle-2"></div>
-            <div
-              class="card-1 d-flex align-items-center justify-content-center"
-            >
-              <i class="icon fa-sharp fa-solid fa-circle-book-open"></i>
-              <div class="justify-content-center">
-                <h4 class="my-0">5000+</h4>
-                <p class="text-secondary my-0">Sutaible Course</p>
+      <section class="overflow-x-hidden">
+        <div class="container lg-vh-100">
+          <div class="row lg-h-100 d-sm-flex flex-column-reverse">
+            <div class="col-lg-7 my-auto">
+              <div class="my-5 fs-3">Book your course</div>
+              <h1 class="display-2 fw-bold">
+                A great place <br />
+                for learning.
+              </h1>
+              <p class="fs-4 text-secondary">
+                A best and cheapest way of <br />getting knw learning to make a
+                <br />
+                better tomorrow
+              </p>
+              <div>
+                <button class="my-5 background-color btn btn-primary px-5 py-3">
+                  Get started
+                </button>
               </div>
             </div>
-            <div class="card-2">
-              <div class="text-center">
-                <h4 class="my-0">20K+</h4>
-                <p class="text-secondary">Active Student</p>
-                <div>
-                  <img class="small-img img-1" src="./Assets/images/girl.png" />
-                  <img class="small-img img-3" src="./Assets/images/girl.png" />
-                  <img class="small-img img-2" src="./Assets/images/girl.png" />
+            <div class="hero-md col-lg-3 my-auto vh-100 h-100 position-relative">
+              <img
+                class="h-100 sm-ml-135 object-fit-cover"
+                src="./Assets/images/girl.png"
+              />
+              <div class="circle-1"></div>
+              <div class="circle-2"></div>
+              <div
+                class="card-1 d-flex align-items-center justify-content-center"
+              >
+                <i class="icon fa-sharp fa-solid fa-circle-book-open"></i>
+                <div class="justify-content-center">
+                  <h4 class="my-0">5000+</h4>
+                  <p class="text-secondary my-0">Sutaible Course</p>
+                </div>
+              </div>
+              <div class="card-2">
+                <div class="text-center">
+                  <h4 class="my-0">20K+</h4>
+                  <p class="text-secondary">Active Student</p>
+                  <div>
+                    <img
+                      class="small-img img-1"
+                      src="./Assets/images/girl.png"
+                    />
+                    <img
+                      class="small-img img-3"
+                      src="./Assets/images/girl.png"
+                    />
+                    <img
+                      class="small-img img-2"
+                      src="./Assets/images/girl.png"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,12 +119,9 @@
       </section>
     </section>
 
-
     <!-- What we provide - Screen -->
-    <section
-      class="container ptb-100"
-    >
-      <div class="row text-center my-5">
+    <section class="container ptb-100">
+      <div class="row text-center justify-content-center my-5">
         <h1 class="display-4 fw-bolder">What we provide</h1>
         <p class="text-secondary my-3 fs-5">
           Here is our amazing teaching methods that suits for you <br />
@@ -119,13 +129,13 @@
         </p>
       </div>
       <div class="row mt-5 w-100">
-        <div class="col-4 text-center">
+        <div class="my-2 col-lg-4 col-md-6 text-center">
           <i
             class="fa-duotone fa-desktop display-4 bg-warning p-4 mb-3 text-white rounded-4"
           ></i>
           <p class="fs-4 fw-bolder">Live Class with best <br />teachers</p>
         </div>
-        <div class="col-4 text-center">
+        <div class="my-2 col-lg-4 col-md-6 text-center">
           <i
             class="fa-solid fa-comment-dots display-4 p-4 mb-3 text-white bg-danger rounded-4"
           ></i>
@@ -134,7 +144,7 @@
             the class
           </p>
         </div>
-        <div class="col-4 text-center">
+        <div class="my-2 col-lg-4 col-md-12 text-center">
           <i
             class="fa-solid fa-file display-4 p-4 mb-3 text-white background-color rounded-4"
           ></i>
@@ -146,7 +156,7 @@
     <!-- Section 03 - Experience Section-->
     <section class="container ptb-100">
       <div class="row">
-        <div class="col-6 position-relative">
+        <div class="col-lg-6 col-md-12 col-sm-12 position-relative">
           <div class="div-card-1 background-color-light rounded-5"></div>
           <div class="div-card-2 rounded-5"></div>
 
@@ -180,7 +190,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="mt-5 mt-528 col-lg-6 col-md-12 col-sm-12 ">
           <h1 class="display-4 fw-bolder">
             Trusted by best <br />
             teachers
@@ -201,15 +211,15 @@
     <!-- Popular course section -->
     <section class="container pt-100">
       <div class="row">
-        <div class="col-7">
-          <h1 class="display-2 fw-bold">Our popular course</h1>
+        <div class="col-lg-7 col-sm-12">
+          <h1 class="fw-bold">Our popular course</h1>
           <p class="text-secondary fs-4 mt-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
             suscipit amet laudantium blanditiis ipsam expedita nihil iusto
             tenetur.
           </p>
         </div>
-        <div class="col-2 offset-3 d-flex">
+        <div class="col-lg-2 offset-lg-3 col-sm-12 d-flex">
           <a class="main-color d-flex align-items-center" href="#"
             >View All Course</a
           >
@@ -220,7 +230,7 @@
     <!-- Course card section -->
     <section class="container pb-250">
       <div class="row">
-        <div class="col course-card mx-2 position-relative">
+        <div class="col-2 col-sm-12 course-card  position-relative">
           <div class="img">
             <img
               class="rounded-5"
@@ -243,7 +253,7 @@
             </div>
           </div>
         </div>
-        <div class="col course-card mx-2 position-relative">
+        <div class="col-2 col-sm-12 course-card  position-relative">
           <div class="img">
             <img
               class="rounded-5"
@@ -266,7 +276,7 @@
             </div>
           </div>
         </div>
-        <div class="col course-card mx-2 position-relative">
+        <div class="col-2 col-sm-12 course-card position-relative">
           <div class="img">
             <img
               class="rounded-5"
@@ -297,10 +307,18 @@
       <div class="subscribe-section container ptb-200">
         <div class="d-flex flex-column text-center">
           <h1 class="display-4 fw-bolder main-color">Subscribe Newsletter</h1>
-          <p class="fs-4 text-secondary mb-5">Subscribe our newsletter for getting the updates</p>
+          <p class="fs-4 text-secondary mb-5">
+            Subscribe our newsletter for getting the updates
+          </p>
           <div class="position-relative">
-            <input placeholder="Enter your email." class="rounded-4" type="email" />
-            <button class="my-5 background-color btn btn-primary px-5 py-3 rounded-4">
+            <input
+              placeholder="Enter your email."
+              class="rounded-4"
+              type="email"
+            />
+            <button
+              class="my-5 background-color btn btn-primary px-5 py-3 rounded-4"
+            >
               Get Started
             </button>
           </div>
@@ -311,11 +329,14 @@
     <!-- Footer -->
     <footer class="container footer pt-100">
       <div class="row">
-        <div class="col-3">
+        <div class="col-lg-3 col-sm-12">
           <div class="main-color display-4 fw-bold">Besnik</div>
-          <p class="my-5 text-secondary fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laborum, quod necessitatibus omnis repellendus aut.</p>
+          <p class="my-5 text-secondary fs-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            laborum, quod necessitatibus omnis repellendus aut.
+          </p>
         </div>
-        <div class="col-3 offset-1">
+        <div class="col-lg-3 offset-lg-1 col-sm-12">
           <ul>
             <li class="fs-3 fw-bolder">Company</li>
             <li><a href="#">About</a></li>
@@ -325,7 +346,7 @@
             <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-sm-12">
           <ul>
             <li class="fs-3 fw-bolder">Support</li>
             <li><a href="#">Support carrer</a></li>
@@ -333,17 +354,32 @@
             <li><a href="#">Quick Chat</a></li>
           </ul>
         </div>
-        <div class="col-2 offset-1">
+        <div class="col-lg-2 offset-lg-1 col-sm-12">
           <div class="fs-3 fw-bolder mt-4">Social</div>
           <div class="my-5">
-            <a href="#"><i class="main-color p-3 rounded-4 mx-2 bg-color fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="main-color p-3 rounded-4 mx-2 bg-color fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="main-color p-3 rounded-4 mx-2 bg-color fa-brands fa-twitter"></i></a>
+            <a href="#"
+              ><i
+                class="main-color p-3 rounded-4 mx-2 bg-color fa-brands fa-linkedin-in"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="main-color p-3 rounded-4 mx-2 bg-color fa-brands fa-facebook-f"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="main-color p-3 rounded-4 mx-2 bg-color fa-brands fa-twitter"
+              ></i
+            ></a>
           </div>
         </div>
       </div>
       <div class="row text-center my-5">
-        <div class="col">Copyright <i class="fa-regular fa-copyright"></i> 2023 All Right Reserved Besnik agency</div>
+        <div class="col">
+          Copyright <i class="fa-regular fa-copyright"></i> 2023 All Right
+          Reserved Besnik agency
+        </div>
       </div>
     </footer>
 
@@ -362,5 +398,17 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function handleMenu(){
+        console.log(document.getElementById("mobileMenu").classList.contains("active"))
+        const status = document.getElementById("mobileMenu").classList.contains("active");
+        if(status){
+          document.getElementById("mobileMenu").classList.remove("active");
+        }else{
+          document.getElementById("mobileMenu").classList.add("active");
+        }
+      }
+    </script>
   </body>
 </html>
